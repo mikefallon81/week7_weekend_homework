@@ -1,7 +1,7 @@
 <template lang="html">
   <select @change="articleSelected">
     <option selected disabled></option>
-    <option v-for="(article, index) :value="index" in articles">{{article.webTitle}}</option>
+    <option v-for="(article, index) in articles" :value="index">{{article.webTitle}}</option>
 
   </select>
 </template>
@@ -15,8 +15,8 @@ export default {
   props: ['articles'],
   methods: {
     articleSelected(e) {
-      const selectedArticle = e.target.value;
-      eventBus.$emit('article-selected', selectedArticle);
+      const selectedIndex = e.target.value;
+      eventBus.$emit('article-selected', selectedIndex);
     }
   }
 }

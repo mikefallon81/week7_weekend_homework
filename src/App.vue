@@ -8,10 +8,13 @@
 <script>
 import { eventBus } from '@/main.js';
 import ArticleSelect from '@/components/ArticleSelect.vue';
+import ArticleInfo from '@/components/ArticleInfo.vue';
 
 export default {
   components: {
-    'article-select': ArticleSelect
+    'article-select': ArticleSelect,
+    'article-info': ArticleInfo
+
   },
   data(){
     return{

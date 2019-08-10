@@ -26,7 +26,10 @@ export default {
     eventBus.$on('article-selected', (selectedIndex) => {
       this.selectedArticle = this.articles[selectedIndex];
     });
-    fetch("https://content.guardianapis.com/search?q=brexit&format=json&api-key=test")
+    fetch("http://content.guardianapis.com/search?from-date=2019-08-10&to-date=2019-08-10&order-by=newest&show-fields=all&page-size=200&api-key=2b079f94-139b-4654-b363-887f8dfc9b20")
+
+
+
     .then(res => res.json())
     .then(articles => this.articles = articles.response.results)
   }
@@ -35,3 +38,6 @@ export default {
 
 <style lang="css" scoped>
 </style>
+
+<!--
+https://content.guardianapis.com/search?q=scotland&api-key=2b079f94-139b-4654-b363-887f8dfc9b20 -->

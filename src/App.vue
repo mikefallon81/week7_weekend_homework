@@ -1,8 +1,8 @@
-<template lang="html">
-  <div class="main">
+<template lang='html'>
+  <div class='main'>
     <h1>News Articles</h1>
-    <article-select :articles="articles" />
-    <article-info :article="selectedArticle" />
+    <article-select :articles='articles' />
+    <article-info :article='selectedArticle' />
   </div>
 </template>
 
@@ -37,7 +37,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang='css' scoped>
 .main {
   display: ;
   padding: 10px;

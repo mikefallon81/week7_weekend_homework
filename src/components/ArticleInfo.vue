@@ -1,9 +1,9 @@
-<template lang="html">
-  <div class="article" v-if="article !== null">
+<template lang='html'>
+  <div class='article' v-if='article !== null'>
     <h3>Publication: {{article.fields.publication}}</h3>
     <h3>Journalist: {{article.fields.byline}}</h3>
-    <h3 class="">Section: {{article.sectionName}}</h3>
-    <p v-html="article.fields.body"></p>
+    <h3 class=''>Section: {{article.sectionName}}</h3>
+    <p v-html='article.fields.body'></p>
 </div>
 </template>
 
@@ -17,7 +17,7 @@ export default {
 <style lang="css" scoped>
 
 h3 {
-  color: blue;
+  color: grey;
   text-align: center;
 }
 

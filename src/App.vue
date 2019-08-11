@@ -27,7 +27,7 @@ export default {
     eventBus.$on('article-selected', (selectedIndex) => {
       this.selectedArticle = this.articles[selectedIndex];
     });
-    fetch("http://content.guardianapis.com/search?from-date=2019-08-10&to-date=2019-08-10&order-by=newest&show-fields=all&page-size=50&api-key=2b079f94-139b-4654-b363-887f8dfc9b20")
+    fetch("http://content.guardianapis.com/search?from-date=2019-08-10&order-by=newest&show-fields=all&page-size=25&api-key=2b079f94-139b-4654-b363-887f8dfc9b20")
 
 
 

@@ -40,9 +40,6 @@ export default {
 	font-size: 18px;
 }
 
-.styled-select optgroup {
-    font-size: 75px;
-}
 
 option {
   font-size: 28px;

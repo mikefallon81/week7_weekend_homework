@@ -2,7 +2,7 @@
   <div class="article" v-if="article !== null">
     <h3>Publication: {{article.fields.publication}}</h3>
     <h3>Journalist: {{article.fields.byline}}</h3>
-    <h3 class="">{{article.sectionName}}</h3>
+    <h3 class="">Section: {{article.sectionName}}</h3>
     <p v-html="article.fields.body"></p>
 </div>
 </template>

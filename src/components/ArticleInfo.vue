@@ -1,7 +1,8 @@
 <template lang="html">
-  <div v-if="article !== null">
-    <h3>{{article.webTitle}}</h3>
-    <p>{{article.sectionName}}</p>
+  <div class="article" v-if="article !== null">
+    <h3>Publication: {{article.fields.publication}}</h3>
+    <h3>Journalist: {{article.fields.byline}}</h3>
+    <h3 class="">{{article.sectionName}}</h3>
     <p v-html="article.fields.body"></p>
 </div>
 </template>
@@ -14,4 +15,16 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+h3 {
+  color: blue;
+  text-align: center;
+}
+
+p {
+  border-style: double;
+  border-color: green;
+  padding: 5px;
+}
+
 </style>

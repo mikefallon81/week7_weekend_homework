@@ -1,5 +1,6 @@
 <template lang="html">
-  <div>
+  <div class="main">
+    <h1>News Articles</h1>
     <article-select :articles="articles" />
     <article-info :article="selectedArticle" />
   </div>
@@ -10,23 +11,23 @@ import { eventBus } from '@/main.js';
 import ArticleSelect from '@/components/ArticleSelect.vue';
 import ArticleInfo from '@/components/ArticleInfo.vue';
 
+
 export default {
   components: {
     'article-select': ArticleSelect,
-    'article-info': ArticleInfo
-
+    'article-info': ArticleInfo,
   },
   data(){
     return{
       articles: [],
-      selectedArticle: null
+      selectedArticle: null,
     }
   },
   mounted(){
     eventBus.$on('article-selected', (selectedIndex) => {
       this.selectedArticle = this.articles[selectedIndex];
     });
-    fetch("http://content.guardianapis.com/search?from-date=2019-08-10&to-date=2019-08-10&order-by=newest&show-fields=all&page-size=200&api-key=2b079f94-139b-4654-b363-887f8dfc9b20")
+    fetch("http://content.guardianapis.com/search?from-date=2019-08-10&to-date=2019-08-10&order-by=newest&show-fields=all&page-size=50&api-key=2b079f94-139b-4654-b363-887f8dfc9b20")
 
 
 
@@ -37,7 +38,17 @@ export default {
 </script>
 
 <style lang="css" scoped>
-</style>
+.main {
+  display: ;
+  padding: 10px;
+}
+h1 {
+  width: 100%;
+  display: ;
+  text-align: center;
+  background-color: grey;
+}
 
-<!--
-https://content.guardianapis.com/search?q=scotland&api-key=2b079f94-139b-4654-b363-887f8dfc9b20 -->
+
+
+</style>

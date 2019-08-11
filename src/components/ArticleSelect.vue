@@ -1,9 +1,12 @@
 <template lang="html">
+  <div class="styled-select dropdown">
   <select @change="articleSelected">
-    <option selected disabled></option>
+  <optgroup>
+  <option selected disabled></option>
     <option v-for="(article, index) in articles" :value="index">{{article.webTitle}}</option>
-
-  </select>
+  </optgroup>
+    </select>
+</div>
 </template>
 
 <script>
@@ -23,4 +26,26 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #873903;
+  height: 50px;
+}
+
+.styled-select select {
+	font-size: 18px;
+}
+
+.styled-select optgroup {
+    font-size: 75px;
+}
+
+option {
+  font-size: 28px;
+}
+
 </style>
